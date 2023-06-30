@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../../favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Visualizador IFC.js</title>
+</head>
+
+<body>
+    <div id="viewer-container"></div>
+
+    <div id="container-button">
+        <!--TREE BUTTON  -->
+        <div id="container-tree-button">
+            <button id="toggle-button-menu">IFC spatial tree</button>
+            <div id="content-tree" class="hidden-tree">
+                <div class="ifc-tree-menu">
+                    <ul id="myUL">
+                        <li id="tree-root">
+                            <span class="caret">span</span>
+                            <ul class="nested">
+                                <li>
+                                    <span class="caret">span</span>
+                                    <ul class="nested">
+                                        <li><span class="caret">span</span>
+                                            <ul class="nested">
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--TREE BUTTON  -->
+
+        <!-- PROPERTIES BUTTON-->
+        <div id="container-properties-button">
+            <button id="toggle-button-properties">IFC Properties</button>
+            <div id="content-properties" class="hidden-properties">
+                <div class="ifc-property-menu">
+                    <div class="ifc-property-item" id="ifc-property-item-id">
+                        <div>Key</div>
+                        <div class="ifc-property-value">Value</div>
+                    </div>
+                    <div id="ifc-property-menu-root"></div>
+                </div>
+            </div>
+        </div>
+        <!-- PROPERTIES BUTTON-->
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>

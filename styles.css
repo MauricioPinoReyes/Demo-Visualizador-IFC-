@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+#viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+#container-button{
+    display: flex;
+    align-items: center;
+}
+
+
+/*TREE BUTTON*/
+.hidden-tree, .hidden-properties{
+    display: none;
+  }
+
+  #toggle-button-menu, #toggle-button-properties{
+    /*color: black;*/
+    /*background-color: blue;*/
+    /*position: absolute;*/
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    /*background-color: #1e90ff;*/
+    background-color:  rgba(4, 4, 37, 0.5);
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    /*border-radius: 5px ;*/
+    border: solid;
+    cursor: pointer;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+#toggle-button-menu:hover, #toggle-button-menu:focus, #toggle-button-menu:active
+,#toggle-button-properties:hover, #toggle-button-properties:focus, #toggle-button-properties:active{
+    /*box-shadow: 0 0 20px rgba(0, 0, 0,0.5);*/
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    /*color: #7a1a1a;*/
+}
+
+/*TREE BUTTON*/
+
+/*Tree view: https://www.w3schools.com/howto/howto_js_treeview.asp*/
+
+.ifc-tree-menu {
+    position: absolute;
+    overflow-y: scroll;
+    /*overflow-x: scroll;*/
+    /*background-color: white;*/
+    background-color:  rgba(4, 4, 37, 0.5);
+    height: 80vh;
+    /*width: 250px;*/
+    margin-top: 15px;
+    margin-left: 20px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: solid;
+}
+
+li ul {
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0.5rem;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: #fff;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+    margin-left: 10px;
+}
+
+/*PROPERTIES BUTTON*/
+.ifc-property-menu {
+    /*display: inline-block;*/
+    border:solid ;
+    width: 20rem;
+    position: absolute;
+    background-color: white;
+    /*overflow-y: scroll;*/
+    /*overflow-x: scroll;*/
+    /*background-color: white;*/
+    background-color:  rgba(4, 4, 37, 0.5);
+    height: 80vh;
+    /*width: 250px;*/
+    margin-top: 15px;
+    margin-left: 20px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    /*border: solid;*/
+}
+
+.ifc-property-item {
+    display: flex;
+    /*flex-direction: row;*/
+    width: 100%;
+    padding: 0.5rem;
+    border-bottom: solid 1px #fff;
+}
+
+.ifc-property-value {
+    width: 100%;
+    text-align: right;
+}
+
+/*PROPERTIES BUTTON*/
+
+.ifc-property-item{
+    text-transform: uppercase; 
+}
