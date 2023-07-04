@@ -24,11 +24,11 @@ html, body {
 
 
 /*TREE BUTTON*/
-.hidden-tree, .hidden-properties{
+.hidden-tree, .hidden-properties, .hidden-export-to-excel{
     display: none;
   }
 
-  #toggle-button-menu, #toggle-button-properties{
+  #toggle-button-menu, #toggle-button-properties,#toggle-button-export{
     /*color: black;*/
     /*background-color: blue;*/
     /*position: absolute;*/
@@ -57,7 +57,8 @@ html, body {
 }
 
 #toggle-button-menu:hover, #toggle-button-menu:focus, #toggle-button-menu:active
-,#toggle-button-properties:hover, #toggle-button-properties:focus, #toggle-button-properties:active{
+,#toggle-button-properties:hover, #toggle-button-properties:focus, #toggle-button-properties:active,
+#toggle-button-export:hover, #toggle-button-export:focus,#toggle-button-export:active{
     /*box-shadow: 0 0 20px rgba(0, 0, 0,0.5);*/
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -170,3 +171,51 @@ ul, #myUL {
 .ifc-property-item{
     text-transform: uppercase; 
 }
+
+/*EXPORT TO EXCEL*/
+
+button {
+    position: absolute;
+    right: 0;
+}
+
+.table-container {
+    position: absolute;
+    max-height: 100vh;
+    background-color: white;
+    overflow: scroll;
+}
+
+#walls-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    max-width: 30vw;
+}
+
+#walls-table td, #walls-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#walls-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#walls-table tr:hover {background-color: #ddd;}
+
+#walls-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+/*END EXPORT TO EXCEL*/
