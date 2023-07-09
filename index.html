@@ -6,72 +6,82 @@
     <link rel="icon" href="../../../favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
-    <title>Visualizador IFC.js Pruebas</title>
+    <title>Vizualizador IFCjs 2.0</title>
 </head>
 
 <body>
     <div id="viewer-container"></div>
 
-    <div id="container-button">
-        <!--TREE BUTTON  -->
-        <div id="container-tree-button">
-            <button id="toggle-button-menu">IFC spatial tree</button>
-            <div id="content-tree" class="hidden-tree">
-                <div class="ifc-tree-menu">
-                    <ul id="myUL">
-                        <li id="tree-root">
-                            <span class="caret">span</span>
-                            <ul class="nested">
-                                <li>
-                                    <span class="caret">span</span>
-                                    <ul class="nested">
-                                        <li><span class="caret">span</span>
-                                            <ul class="nested">
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--END TREE BUTTON  -->
+    <!--TREE-->
+    <div class="ifc-tree-menu">
+        <ul id="myUL">
+            <li id="tree-root">
+                <span class="caret">Loading Tree</span>
+                <ul class="nested">
+                    <li>
+                        <span class="caret">Loading Tree</span>
+                        <ul class="nested">
+                            <li><span class="caret">Loading Tree</span>
+                                <ul class="nested">
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-        <!-- PROPERTIES BUTTON-->
-        <div id="container-properties-button">
-            <button id="toggle-button-properties">IFC Properties</button>
-            <div id="content-properties" class="hidden-properties">
+    <!--END TREE-->
+
+    <!--DROPDOWN MENU -->
+    <div class="accordion">
+        <div class="contentBX">
+            <div class="label">Properties</div>
+            <div class="content">
                 <div class="ifc-property-menu">
-                    <div class="ifc-property-item" id="ifc-property-item-id">
+                    <div class="ifc-property-item">
                         <div>Key</div>
                         <div class="ifc-property-value">Value</div>
                     </div>
                     <div id="ifc-property-menu-root"></div>
-                </div>
+            </div>
             </div>
         </div>
-        <!-- END PROPERTIES BUTTON-->
-
-        <!-- EXPORT TO EXCEL BUTTON-->
-
-        <div id="container-properties-button">
-            <button id="toggle-button-export">Export to Excel</button>
-            <div id="content-export-to excel" class="hidden-export-to-excel">
-                <div class="table-container">
-                    <table id="walls-table">
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+        <div class="contentBX">
+            <div class="label">List Two</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto dolore consequatur mollitia
+                    vitae, ut illum voluptate assumenda, explicabo modi velit, sequi quas nisi laudantium vero? Corporis
+                    ullam ducimus doloremque.</p>
             </div>
         </div>
-        <button id="export">Export table</button>
-        <!-- END EXPORT TO EXCEL BUTTON-->
+        <div class="contentBX">
+            <div class="label">List Three</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto dolore consequatur mollitia
+                    vitae, ut illum voluptate assumenda, explicabo modi velit, sequi quas nisi laudantium vero? Corporis
+                    ullam ducimus doloremque.</p>
+            </div>
+        </div>
+        <div class="contentBX">
+            <div class="label">List Four</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto dolore consequatur mollitia
+                    vitae, ut illum voluptate assumenda, explicabo modi velit, sequi quas nisi laudantium vero? Corporis
+                    ullam ducimus doloremque.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto dolore consequatur mollitia
+                        vitae, ut illum voluptate assumenda, explicabo modi velit, sequi quas nisi laudantium vero? Corporis
+                        ullam ducimus doloremque.</p>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <!--END DROPDOWN MENU -->
+    
+    
     <script src="bundle.js"></script>
 </body>
 

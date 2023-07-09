@@ -17,81 +17,22 @@ html, body {
     height: 100%;
 }
 
-#container-button{
-    display: flex;
-    align-items: center;
-}
-
-
-/*TREE BUTTON*/
-.hidden-tree, .hidden-properties, .hidden-export-to-excel{
-    display: none;
-  }
-
-  #toggle-button-menu, #toggle-button-properties,#toggle-button-export{
-    /*color: black;*/
-    /*background-color: blue;*/
-    /*position: absolute;*/
-    margin-top: 10px;
-    margin-left: 10px;
-    position: relative;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    font-weight: bold;
-    /*background-color: #1e90ff;*/
-    background-color:  rgba(4, 4, 37, 0.5);
-    width: 250px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    /*border-radius: 5px ;*/
-    border: solid;
-    cursor: pointer;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
-    -webkit-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
-}
-
-#toggle-button-menu:hover, #toggle-button-menu:focus, #toggle-button-menu:active
-,#toggle-button-properties:hover, #toggle-button-properties:focus, #toggle-button-properties:active,
-#toggle-button-export:hover, #toggle-button-export:focus,#toggle-button-export:active{
-    /*box-shadow: 0 0 20px rgba(0, 0, 0,0.5);*/
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    /*color: #7a1a1a;*/
-}
-
-/*TREE BUTTON*/
-
 /*Tree view: https://www.w3schools.com/howto/howto_js_treeview.asp*/
 
 .ifc-tree-menu {
     position: absolute;
     overflow-y: scroll;
-    /*overflow-x: scroll;*/
-    /*background-color: white;*/
-    background-color:  rgba(4, 4, 37, 0.5);
-    height: 80vh;
-    /*width: 250px;*/
-    margin-top: 15px;
-    margin-left: 20px;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    border: solid;
+    background-color: white;
+    height: 100vh;
 }
 
-li ul {
+.ifc-tree-menu li ul {
     user-select: none;
     cursor: pointer;
 }
 
 /* Remove default bullets */
-ul, #myUL {
+.ifc-tree-menu ul, #myUL {
     list-style-type: none;
 }
 
@@ -110,7 +51,7 @@ ul, #myUL {
 /* Create the caret/arrow with a unicode, and style it */
 .caret::before {
     content: "\25B6";
-    color: #fff;
+    color: black;
     display: inline-block;
     margin-right: 6px;
 }
@@ -118,7 +59,6 @@ ul, #myUL {
 /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
 .caret-down::before {
     transform: rotate(90deg);
-    color: #fff;
 }
 
 /* Hide the nested list */
@@ -132,90 +72,87 @@ ul, #myUL {
     margin-left: 10px;
 }
 
-/*PROPERTIES BUTTON*/
-.ifc-property-menu {
-    /*display: inline-block;*/
-    border:solid ;
-    width: 20rem;
+/*PROPERTIES*/
+#dowpdown-menu-container{
     position: absolute;
+    top:0;
+    right: 0;
+}
+
+.ifc-property-menu {
+    border: 1px solid gray;
+    width: 20rem;
+    /*position: absolute;
+    top:0;
+    right: 0;*/
     background-color: white;
-    /*overflow-y: scroll;*/
-    /*overflow-x: scroll;*/
-    /*background-color: white;*/
-    background-color:  rgba(4, 4, 37, 0.5);
-    height: 80vh;
-    /*width: 250px;*/
-    margin-top: 15px;
-    margin-left: 20px;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    /*border: solid;*/
+    /*position: relative;*/
+    
 }
 
 .ifc-property-item {
     display: flex;
-    /*flex-direction: row;*/
+    flex-direction: row;
     width: 100%;
     padding: 0.5rem;
-    border-bottom: solid 1px #fff;
+    border-bottom: solid 1px gray;
 }
 
 .ifc-property-value {
     width: 100%;
     text-align: right;
 }
+/*FIN PROPERTIES*/
 
-/*PROPERTIES BUTTON*/
-
-.ifc-property-item{
-    text-transform: uppercase; 
-}
-
-/*EXPORT TO EXCEL*/
-
-button {
+/*DROPDOWN MENU*/
+.accordion{
+    /*max-width: 800px;*/
     position: absolute;
+    top: 0;
     right: 0;
 }
 
-.table-container {
+.accordion .contentBX{
+    position: relative;
+    /*margin: 10px 20px;*/
+    border: solid green;
+    width: 350px;
+    
+}
+
+.accordion .contentBX .label{
+    position: relative;
+    padding: 10px;
+    background: #2694af;
+    color: #fff;
+    cursor: pointer;
+}
+
+.accordion .contentBX .label::before{
+    content: '+';
     position: absolute;
-    max-height: 100vh;
-    background-color: white;
-    overflow: scroll;
+    top:50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
 }
 
-#walls-table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    max-width: 30vw;
+.accordion .contentBX .content{
+    position: relative;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
 }
 
-#walls-table td, #walls-table th {
-    border: 1px solid #ddd;
-    padding: 8px;
+.accordion .contentBX.active-2 .content{
+    height: auto;
+    padding: 10px;
 }
 
-#walls-table tr:nth-child(even){background-color: #f2f2f2;}
-
-#walls-table tr:hover {background-color: #ddd;}
-
-#walls-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
+.accordion .contentBX.active-2 .label::before{
+    content: '-';
 }
 
-#viewer-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-    width: 100%;
-    height: 100%;
-}
-
-/*END EXPORT TO EXCEL*/
+/*END DROPDOWN MENU*/
