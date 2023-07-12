@@ -156,3 +156,11 @@ html, body {
 }
 
 /*END DROPDOWN MENU*/
+
+/*EXPORT TO EXCEL*/
+
+.export-table-container{
+    display: none;
+}
+
+/*END EXPORT TO EXCEL*/

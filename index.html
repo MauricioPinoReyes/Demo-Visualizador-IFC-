@@ -40,6 +40,7 @@
     <!--DROPDOWN MENU -->
     <div class="accordion">
         <div class="contentBX">
+            <!--PROPERTIES-->
             <div class="label">Properties</div>
             <div class="content">
                 <div class="ifc-property-menu">
@@ -50,14 +51,29 @@
                     <div id="ifc-property-menu-root"></div>
             </div>
             </div>
+            <!--END PROPERTIES-->
         </div>
         <div class="contentBX">
-            <div class="label">List Two</div>
+            <!--EXPORT TO EXCEL-->
+            <div class="label">Export to Excel</div>
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto dolore consequatur mollitia
-                    vitae, ut illum voluptate assumenda, explicabo modi velit, sequi quas nisi laudantium vero? Corporis
-                    ullam ducimus doloremque.</p>
+                <div class="export-table-container">
+                    <table id="walls-table">
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <table id="slabs-table">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="export-buttons">
+                    <button id="export-walls">Export Walls</button>
+                    <button id="export-slabs">Export Slabs</button>
+                </div>
             </div>
+            <!--END EXPORT TO EXCEL-->
         </div>
         <div class="contentBX">
             <div class="label">List Three</div>
@@ -81,7 +97,7 @@
     </div>
     <!--END DROPDOWN MENU -->
     
-    
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
     <script src="bundle.js"></script>
 </body>
 
