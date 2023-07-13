@@ -22,8 +22,9 @@ html, body {
 .ifc-tree-menu {
     position: absolute;
     overflow-y: scroll;
-    background-color: white;
+    background-color:  rgba(4, 4, 37, 0.5);
     height: 100vh;
+    color: white;
 }
 
 .ifc-tree-menu li ul {
@@ -51,7 +52,7 @@ html, body {
 /* Create the caret/arrow with a unicode, and style it */
 .caret::before {
     content: "\25B6";
-    color: black;
+    color:white;
     display: inline-block;
     margin-right: 6px;
 }
@@ -80,13 +81,16 @@ html, body {
 }
 
 .ifc-property-menu {
-    border: 1px solid gray;
-    width: 20rem;
+    border: 1px solid white;
+    /*width: 20rem;*/
     /*position: absolute;
     top:0;
     right: 0;*/
-    background-color: white;
+    /*background-color: white;*/
+    background-color:  rgba(4, 4, 37, 0.5);
     /*position: relative;*/
+    color: white;
+    font-weight: 400;
     
 }
 
@@ -115,7 +119,7 @@ html, body {
 .accordion .contentBX{
     position: relative;
     /*margin: 10px 20px;*/
-    border: solid green;
+    border: solid white;
     width: 350px;
     
 }
@@ -123,7 +127,7 @@ html, body {
 .accordion .contentBX .label{
     position: relative;
     padding: 10px;
-    background: #2694af;
+    background: #27374D;
     color: #fff;
     cursor: pointer;
 }
@@ -139,7 +143,7 @@ html, body {
 
 .accordion .contentBX .content{
     position: relative;
-    background: #fff;
+    /*background: #DDE6ED;*/
     height: 0;
     overflow: hidden;
     transition: 0.5s;
@@ -148,7 +152,7 @@ html, body {
 
 .accordion .contentBX.active-2 .content{
     height: auto;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .accordion .contentBX.active-2 .label::before{
@@ -163,4 +167,37 @@ html, body {
     display: none;
 }
 
+.export-buttons{
+    background-color: rgba(4, 4, 37, 0.5);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.export-buttons button{
+    background-color:#27374D;
+    color: #fff;
+    width: 100px;
+    height: 25px;
+}
+
+
+
 /*END EXPORT TO EXCEL*/
+
+/*VISIBILITY*/
+.checkboxes {
+    /*position: absolute;*/
+    /*left: 1rem;
+    top: 1rem;*/
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(4, 4, 37, 0.5);
+    color: white;
+    font-weight: 400;
+}
+
+.checkboxes div{
+    width: 150px;
+}
+/*END VISIBILITY*/
